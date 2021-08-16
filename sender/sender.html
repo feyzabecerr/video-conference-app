@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <title>Webrtc</title>
+        <link rel = "stylesheet" href="../style.css">    
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='js/webcam-ui-lib.js'></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    </head>
+
+    <body>     
+        <div class="container parent" id="container parent">
+        <div id = "start-call" class="start-call">
+            <input placeholder="Enter meeting password: "
+                    type = "text"
+                    id = "username-input" /><br>
+            <button class= "btn btn-outline-secondary" onclick="sendUsername()">Send</button>
+            <button class="btn btn-outline-secondary" onclick="startCall()">Start Call</button>                   
+        </div> 
+        <div id="video-call-div">  
+            <video muted id = "webcam1" autoplay playsinline width="640" height="480"></video>
+            <video id = "webcam2" autoplay  playsinline width="640" height="480"></video>
+        </div>  
+            <div class = "call-action-div">
+                <button class="btn btn-outline-secondary" onclick="muteVideo()">Mute Video</button>
+                <button class="btn btn-outline-secondary" onclick="muteAudio()">Mute Audio</button>
+            </div> 
+            <div class="removed box">
+                <canvas id="canvas1" class="canvas1" autoplay width="640px" height="480px" ></canvas>
+            </div>
+            <div class="change">
+                <img id="change-background" src="../images/2303929-200.png" class="photo">
+                <div class = "overlay">
+                    <div class = "text">Change Background</div>
+                </div>
+            </div>
+        </div>
+        <script src = "./sender.js"></script>
+
+    </body>
+
+
+</html>
