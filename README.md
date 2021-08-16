@@ -13,7 +13,8 @@
 
 # Start Playing
 * Turn on the Webcam switch and allowing the browser to access your webcam
-* To start server write this command to terminal;
+* To start server write this commands to terminal;
+* * `npm install`
 * * `npm start` 
 * To create meeting enter the password in the both side
 * To change background press the button on the left
